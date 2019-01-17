@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+using System;
 
-namespace ConsoleApp1
-{
-    class Rectangle
+public class Rectangle
     {
         double Length;
         double Width;
-        public Rectangle(double l, double w)
+        public double Area(double l, double w)
         {
-            if (l < w)
+            if (l < w) {
                 throw new Exception("Length cannot be less than width!");
-            this.Length = l;
-            this.Width = w;
+			} else {
+				this.Length = l;
+				this.Width = w;
+			}
+			
+			double area = l * w;
+			
+			return area;
         }
         
     }
-    class Program
+					
+public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Rectangle r;
             try
             {
-                r = new Rectangle(3,4);
+                var r = new Rectangle();
+				Console.WriteLine(r.Area(4,3));
                 
             }
             catch (Exception ex)
@@ -36,4 +36,3 @@ namespace ConsoleApp1
             }
         }
     }
-}
