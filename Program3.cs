@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp3
 {
 
-    class  MyArray
+    public class  MyArray
     {
         double[] data;
         public MyArray()
@@ -23,9 +23,9 @@ namespace ConsoleApp3
     }
         
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             MyArray ma = new MyArray();
             for (int k = -5; k <= 9; k++)
